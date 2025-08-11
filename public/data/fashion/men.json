@@ -1,0 +1,12 @@
+[
+  {
+    "id": "men1",
+    "name": "Men's Cotton T-Shirt",
+    "brand": "Roadster",
+    "price": 499,
+    "image": "/images/fashion/men/tshirt.jpg",
+    "description": "Comfortable cotton t-shirt for men",
+    "category": "fashion",
+    "subcategory": "men"
+  }
+]

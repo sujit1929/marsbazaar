@@ -1,0 +1,1 @@
+export const BASE_URL = "https://backend-zeta-sage-45.vercel.app/api/"

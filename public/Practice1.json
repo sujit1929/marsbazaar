@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "products": [
+        {
+          "product_id": "P123",
+          "name": "Smartphone",
+          "details": {
+            "brand": "Brand A",
+            "price": 299.99,
+            "specs": {
+              "screen": "6.1 inch",
+              "battery": "4000mAh",
+              "camera": "12MP"
+            }
+          }
+        },
+        {
+          "product_id": "P456",
+          "name": "Laptop",
+          "details": {
+            "brand": "Brand B",
+            "price": 799.99,
+            "specs": {
+              "processor": "Intel i5",
+              "ram": "8GB",
+              "storage": "256GB SSD"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Home Appliances",
+      "products": [
+        {
+          "product_id": "P789",
+          "name": "Air Conditioner",
+          "details": {
+            "brand": "Brand C",
+            "price": 499.99,
+            "specs": {
+              "capacity": "1.5 Ton",
+              "power": "220V"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

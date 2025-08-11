@@ -1,0 +1,27 @@
+{
+  "schedule": {
+    "week": "May 12 - May 18",
+    "days": [xz
+      {
+        "date": "2025-05-12",
+        "events": [
+          { "time": "09:00", "title": "Team Meeting", "location": "Conference Room" },
+          { "time": "14:00", "title": "Client Presentation", "location": "Online" }
+        ]
+      },
+      {
+        "date": "2025-05-13",
+        "events": [
+          { "time": "10:00", "title": "Project Review", "location": "Office" }
+        ]
+      },
+      {
+        "date": "2025-05-15",
+        "events": [
+          { "time": "12:00", "title": "Lunch with CEO", "location": "Restaurant" },
+          { "time": "16:00", "title": "Coding Session", "location": "Remote" }
+        ]
+      }
+    ]
+  }
+}

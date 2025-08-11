@@ -1,0 +1,12 @@
+[
+  {
+    "id": "women1",
+    "name": "Women's Floral Dress",
+    "brand": "Zara",
+    "price": 1899,
+    "image": "/images/fashion/women/floral-dress.jpg",
+    "description": "Elegant floral dress for women",
+    "category": "fashion",
+    "subcategory": "women"
+  }
+]

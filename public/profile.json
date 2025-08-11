@@ -1,0 +1,17 @@
+{
+  "id": "u12345",
+  "name": "Sujeet Sharma",
+  "role": "Full Stack Web Developer",
+  "bio": "Passionate about building modern web apps using the MERN stack and exploring ethical hacking.",
+  "email": "sujeet@example.com",
+  "location": "India",
+  "avatar": "/indian-man-7061278_960_720.jpg",
+  "skills": ["React", "Next.js", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS"],
+  "socials": {
+    "github": "https://github.com/sujeetsharma",
+    "linkedin": "https://www.linkedin.com/in/sujeetsharma",
+    "twitter": "https://twitter.com/sujeetsharma"
+  }
+}
+
+

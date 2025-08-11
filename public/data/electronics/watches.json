@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1",
+    "name": "Apple Watch Series 8",
+    "brand": "Apple",
+    "price": 39999,
+    "originalPrice": 45999,
+    "description": "Always-on Retina display, ECG app, Blood Oxygen app, and water resistance up to 50 meters.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.8,
+    "isNew": true,
+    "onSale": true,
+    "slug": "watches"
+  },
+  {
+    "id": "2",
+    "name": "Samsung Galaxy Watch 5",
+    "brand": "Samsung",
+    "price": 27999,
+    "originalPrice": 32999,
+    "description": "Advanced sleep coaching, body composition analysis, and enhanced GPS tracking.",
+    "image": "/crousel/galaxy-watch6-safety-mo.webp",
+    "rating": 4.6, "slug": "watches"
+  },
+  {
+    "id": "3",
+    "name": "Fitbit Sense 2",
+    "brand": "Fitbit",
+    "price": 24999,
+    "description": "Advanced health metrics, stress management tools, and built-in GPS.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.3, "slug": "watches"
+  },
+  {
+    "id": "4",
+    "name": "Garmin Forerunner 955",
+    "brand": "Garmin",
+    "price": 53999,
+    "description": "Advanced training features, multi-band GPS, and up to 15 days of battery life.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.7,
+    "isNew": true, "slug": "watches"
+  },
+  {
+    "id": "5",
+    "name": "Amazfit GTR 4",
+    "brand": "Amazfit",
+    "price": 16999,
+    "originalPrice": 19999,
+    "description": "150+ sports modes, 14-day battery life, and built-in Alexa assistant.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.2,
+    "onSale": true, "slug": "watches"
+  },
+  {
+    "id": "6",
+    "name": "Fossil Gen 6",
+    "brand": "Fossil",
+    "price": 23999,
+    "description": "Wear OS by Google, SpO2 monitoring, and fast charging capabilities.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.0, "slug": "watches"
+  },
+  {
+    "id": "7",
+    "name": "Huawei Watch GT 3 Pro",
+    "brand": "Huawei",
+    "price": 32999,
+    "description": "Titanium case, sapphire glass, and comprehensive health monitoring.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.5, "slug": "watches"
+  },
+  {
+    "id": "8",
+    "name": "OnePlus Watch 2",
+    "brand": "OnePlus",
+    "price": 24999,
+    "originalPrice": 29999,
+    "description": "Dual-chip architecture, 100+ workout modes, and up to 100 hours of battery life.",
+    "image": "/placeholder.svg?height=300&width=300",
+    "rating": 4.1,
+    "isNew": true,
+    "onSale": true, "slug": "watches"
+  }
+]

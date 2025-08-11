@@ -1,0 +1,12 @@
+[
+  {
+    "id": "kids1",
+    "name": "Kids Cartoon T-Shirt",
+    "brand": "H&M",
+    "price": 499,
+    "image": "/images/fashion/kids/cartoon-tshirt.jpg",
+    "description": "T-shirt with cute cartoon prints",
+    "category": "fashion",
+    "subcategory": "kids"
+  }
+]
