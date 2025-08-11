@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 
 export default function ProductList() {
     const [products, setProducts] = useState([]);
-    // const BASE_URL = "http://localhost:5000"
-    const BASE_URL = "https://mars-bazaar-backend.vercel.app"
+    const BASE_URL = "http://localhost:5000"
+    // const BASE_URL = "https://mars-bazaar-backend.vercel.app"
 
     useEffect(() => {
         fetch(`${BASE_URL}/api/products/get-all-products`)
