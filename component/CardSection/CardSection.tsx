@@ -1,28 +1,15 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import HeroCarousel from "../Hero/Hero"
-import MobileCarousel from "../Hero/MobileCarousel"
 import ImageSlider from "../Hero/Imageslider"
-import { useQuery } from "@tanstack/react-query"
-import { BASE_URL } from "@/app/Api/Api"
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, EffectFade, Navigation } from "swiper/modules";
+import { useGetSponsoredProducts } from "@/hooks/Product";
+
 
 export default function EcommerceHomepage() {
-  async function GetAllProducts() {
-    const response = await fetch(`${BASE_URL}api/products`);
-    const data = await response.json();
-    return data;
-  }
 
-  const { data: products } = useQuery({
-    queryKey: ["products"],
-    queryFn: GetAllProducts,
-  })
+  const { data } = useGetSponsoredProducts()
+  console.log("data", data)
 
-  console.log("products", products)
   return (
     <div className=" p-4 space-y-6 md:block hidden">
       {/* Grid layout for all sections */}
@@ -149,32 +136,66 @@ export default function EcommerceHomepage() {
 
 
       {/* Featured product */}
-      <div className="w-full bg-white shadow-xl">
-        <div className="p-6 flex flex-col md:flex-row gap-6 items-center">
-          <div className="md:w-1/3 flex justify-center">
-            <Image
-              src="/crousel/galaxy-watch6-safety-mo.webp"
-              alt="Samsung Galaxy Watch6"
-              width={300}
-              height={300}
-              className="rounded-md"
-            />
-          </div>
-          <div className="md:w-2/3">
-            <div className="bg-red-600 text-white inline-block px-2 py-1 text-sm mb-2">Limited time deal</div>
-            <h2 className="text-lg font-medium">Samsung Galaxy Watch6 Classic LTE (47mm, Black, Stainless Steel)</h2>
-            <div className="flex items-center gap-2 mt-2">
-              <span className="text-red-600 text-2xl font-bold">-51%</span>
-              <span className="text-2xl font-bold">₹24,999.00</span>
+      {data?.data?.slice(0).map((item: any) => {
+        return (
+          <div className="w-full bg-white shadow-xl" key={item?._id}>
+            <div className="p-6 flex flex-col md:flex-row gap-6 items-center">
+              {/* Product Image */}
+              <div className="md:w-1/3 flex justify-center">
+                <Image
+                  src={`http://localhost:5000${item?.product?.image}`}
+                  alt={item?.product?.name}
+                  width={300}
+                  height={300}
+                  className="rounded-md"
+                />
+              </div>
+
+              {/* Product Info */}
+              <div className="md:w-2/3">
+                <div className="bg-red-600 text-white inline-block px-2 py-1 text-sm mb-2">
+                  Limited time deal
+                </div>
+                <h2 className="text-lg font-medium">{item?.product?.name}</h2>
+
+                {/* Price */}
+                <div className="flex items-center gap-2 mt-2">
+                  <span className="text-red-600 text-2xl font-bold">-51%</span>
+                  <span className="text-2xl font-bold">₹{item?.product?.price}</span>
+                </div>
+                <div className="text-sm text-gray-500">
+                  M.R.P.: ₹{item?.product?.mrp}
+                </div>
+
+                {/* Prime Tag */}
+                <div className="mt-2">
+                  <Image
+                    src={`http://localhost:5000${item?.product?.image}`}
+                    alt="Prime"
+                    width={60}
+                    height={20}
+                  />
+                </div>
+
+                {/* Add to Cart Button */}
+                <div className="mt-4">
+                  <button
+                    onClick={() => console.log(`Add to cart: ${item?.product?._id}`)}
+                    className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded shadow cursor-pointer"  
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+
+                <div className="text-xs text-right text-gray-500 mt-2">Sponsored</div>
+              </div>
             </div>
-            <div className="text-sm text-gray-500">M.R.P.: ₹50,999.00</div>
-            <div className="mt-2">
-              <Image src="/placeholder.svg?height=20&width=60" alt="Prime" width={60} height={20} />
-            </div>
-            <div className="text-xs text-right text-gray-500 mt-2">Sponsored</div>
           </div>
-        </div>
-      </div>
+        );
+      })}
+
+
+
 
       {/* Second row of categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
