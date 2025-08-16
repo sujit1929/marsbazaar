@@ -2,13 +2,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import ImageSlider from "../Hero/Imageslider"
-import { useGetSponsoredProducts } from "@/hooks/Product";
-
+import SposerProducts from "@/components/SystemUI/Products/SposerProducts"
 
 export default function EcommerceHomepage() {
 
-  const { data } = useGetSponsoredProducts()
-  console.log("data", data)
 
   return (
     <div className=" p-4 space-y-6 md:block hidden">
@@ -128,75 +125,9 @@ export default function EcommerceHomepage() {
           <ImageSlider />
         </div>
       </div>
-
-
-      {/* Api call */}
-
-
-
-
       {/* Featured product */}
-      {data?.data?.slice(0).map((item: any) => {
-        return (
-          <div className="w-full bg-white shadow-xl" key={item?._id}>
-            <div className="p-6 flex flex-col md:flex-row gap-6 items-center">
-              {/* Product Image */}
-              <div className="md:w-1/3 flex justify-center">
-                <Image
-                  src={`http://localhost:5000${item?.product?.image}`}
-                  alt={item?.product?.name}
-                  width={300}
-                  height={300}
-                  className="rounded-md"
-                />
-              </div>
-
-              {/* Product Info */}
-              <div className="md:w-2/3">
-                <div className="bg-red-600 text-white inline-block px-2 py-1 text-sm mb-2">
-                  Limited time deal
-                </div>
-                <h2 className="text-lg font-medium">{item?.product?.name}</h2>
-
-                {/* Price */}
-                <div className="flex items-center gap-2 mt-2">
-                  <span className="text-red-600 text-2xl font-bold">-51%</span>
-                  <span className="text-2xl font-bold">₹{item?.product?.price}</span>
-                </div>
-                <div className="text-sm text-gray-500">
-                  M.R.P.: ₹{item?.product?.mrp}
-                </div>
-
-                {/* Prime Tag */}
-                <div className="mt-2">
-                  <Image
-                    src={`http://localhost:5000${item?.product?.image}`}
-                    alt="Prime"
-                    width={60}
-                    height={20}
-                  />
-                </div>
-
-                {/* Add to Cart Button */}
-                <div className="mt-4">
-                  <button
-                    onClick={() => console.log(`Add to cart: ${item?.product?._id}`)}
-                    className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded shadow cursor-pointer"  
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-
-                <div className="text-xs text-right text-gray-500 mt-2">Sponsored</div>
-              </div>
-            </div>
-          </div>
-        );
-      })}
-
-
-
-
+      
+      <SposerProducts />
       {/* Second row of categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Headphones */}
